@@ -1,0 +1,12 @@
+fastapi==0.65.2
+uvicorn==0.14.0
+pillow==9.3.0
+git+https://github.com/huggingface/transformers
+datasets
+tensorflow
+evaluate
+rouge_score
+jsonschema==4.17.3
+numpy==1.22.0
+google-cloud-logging==3.2.3
+protobuf==3.20.2
