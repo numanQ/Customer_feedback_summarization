@@ -13,11 +13,11 @@ SCOPES = [
     "https://www.googleapis.com/auth/devstorage.read_write"
 ]
 
-API_BASE_URL = os.getenv("API_BASE_URL")
+API_BASE_URL = os.getenv("API_BASE_URL", "api/v1")
 
-SERVICE_NAME = os.getenv("SERVICE_NAME")
+SERVICE_NAME = os.getenv("SERVICE_NAME", "feedback-summarization")
 
-IS_DEVELOPMENT = bool(os.getenv("IS_DEVELOPMENT", "").lower() \
+IS_DEVELOPMENT = bool(os.getenv("IS_DEVELOPMENT", "True").lower() \
     in ("True", "true"))
 
 IS_CLOUD_LOGGING_ENABLED = bool(os.getenv
