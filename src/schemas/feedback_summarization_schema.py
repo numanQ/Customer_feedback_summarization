@@ -21,12 +21,14 @@ class RequestModel(BaseModel):
       }
     }
 
-
+class SummaryScore(BaseModel):
+  summary: str
+  annotation_score: float
 class ResponseModel(BaseModel):
   """Customer Feedback Summarization response pydantic model"""
   success: bool
   message: str
-  data: Optional[Dict[str, str]]
+  data: Optional[SummaryScore]
 
   class Config():
     orm_mode = True
@@ -35,7 +37,8 @@ class ResponseModel(BaseModel):
         "success": True,
         "message": "Successfully generated summary for the given customer feedback",
         "data": {
-            "summary": "None"
-            }
+            "summary": "None",
+            "annotation_score": 0.6
         }
+      }
     }
