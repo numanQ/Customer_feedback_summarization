@@ -42,7 +42,7 @@ def predict(req_body: RequestModel):
     return {
         "success": True,
         "message": "Successfully generated summary for the given customer feedback",
-        "data": summary
+        "data": {"summary": summary, "annotation_score": 0.7}
       }
   except ValidationError as e:
     Logger.error(e)
