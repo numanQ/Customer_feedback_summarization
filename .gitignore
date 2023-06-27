@@ -1,0 +1,4 @@
+src/modeling/checkpoint
+src/modeling/tensorboard_summaries
+**/__pycache__/
+__pycache__/
