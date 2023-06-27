@@ -17,7 +17,7 @@ class RequestModel(BaseModel):
       "example": {
         "customer": "Notion",
         "type": "Appstore/Playstore",
-        "feedback": "The app doesn't send sound or vibration notifications, which makes this feature almost useless on the iPhone"
+        "feedback": "The application opens, but the pages don't, they load continuously."
       }
     }
 
@@ -37,8 +37,8 @@ class ResponseModel(BaseModel):
         "success": True,
         "message": "Successfully generated summary for the given customer feedback",
         "data": {
-            "summary": "None",
-            "annotation_score": 0.6
+            "summary": "User experiences issues with the application opening and pages not loading, experiencing continuous loading.",
+            "annotation_score": 0.49
         }
       }
     }
