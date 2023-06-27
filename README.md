@@ -68,6 +68,8 @@ Here,
  - `score_column`: name of annotated score column in csv file
  - `output_dir`: checkpoint and tensorboard summaries directory
 
+<u>**Note**</u>: After training the model on the few annotated data, use **semi-supervised** learning to generate labels for the rest of the data and then retrain on high confidence data points iteratively.
+
 ## Deploy
 ### Deploy using docker
 Build the docker image using the `Dockerfile`:
