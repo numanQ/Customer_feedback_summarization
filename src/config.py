@@ -1,9 +1,7 @@
 """script for loading configuration."""
 import os
 
-PORT = os.environ["PORT"] if os.environ.get("PORT") is not None else 80
-GCP_PROJECT = os.environ.get("GCP_PROJECT", "")
-os.environ["GOOGLE_CLOUD_PROJECT"] = GCP_PROJECT
+PORT = os.environ["PORT"] if os.environ.get("PORT") is not None else 7860
 
 SCOPES = [
     "https://www.googleapis.com/auth/cloud-platform",
@@ -20,12 +18,13 @@ SERVICE_NAME = os.getenv("SERVICE_NAME", "feedback-summarization")
 IS_DEVELOPMENT = bool(os.getenv("IS_DEVELOPMENT", "True").lower() \
     in ("True", "true"))
 
-IS_CLOUD_LOGGING_ENABLED = bool(os.getenv
-            ("IS_CLOUD_LOGGING_ENABLED", "true").lower() in ("true",))
+SUMMARY_MODEL_NAME = "t5-base"
 
-MODEL_NAME = "t5-base"
+SCORING_MODEL_NAME = "distilbert-base-uncased"
 
-CHECKPOINT_PATH = "./modeling/checkpoint"
+HF_HUB_SUMMARY_MODEL_NAME = "numanBot/customer_feedback_summarization"
+
+HF_HUB_SCORING_MODEL_NAME = "numanBot/summary_annotation_score"
 
 PREFIX = "summarize: "
 
