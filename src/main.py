@@ -10,7 +10,7 @@ BASE_URL = f"/{SERVICE_NAME}/{API_BASE_URL}"
 app = FastAPI()
 
 
-@app.get("/ping")
+@app.get("/")
 def health_check():
   return {
       "success": True,
@@ -21,9 +21,7 @@ def health_check():
 
 api = FastAPI(
     title="Customer Feedback Summarization APIs",
-    version="latest",
-    docs_url=None,
-    redoc_url=None)
+    version="latest")
 
 api.include_router(feedback_summarization.router)
 
