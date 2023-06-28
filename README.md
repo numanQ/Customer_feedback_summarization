@@ -13,6 +13,13 @@ pip install tensorflow
 pip install evaluate
 pip install rouge_score
 ```
+
+## Data Analysis
+The following notebook contains all the analysis done on the customer feedback summary data.
+```
+Exploratory_Data_Analysis.ipynb
+```
+
 ## Train Summarization model
 Train a T5 based customer feedback summarization model in tensorflow
 ```
@@ -92,7 +99,7 @@ uvicorn main:app --host 0.0.0.0 --port 7860
 This will start a fastapi application on
 > 0.0.0.0:7860
 
-# Inference
+## Inference
 The following localhost endpoint can be used to fetch the summaries for user feedback and their corresponding annotation scores:
 ```
 [POST]: 0.0.0.0:7860/feedback-summarization/api/v1/summary
@@ -111,3 +118,10 @@ For demo purpose, I have done a complete end to end training of the customer fee
 
 You can use the following url for **DEMO**:
 [https://numanbot-customer-feedback-summarization.hf.space/feedback-summarization/api/v1/docs#/Customer%20Feedback%20Summarization/predict_summary_post](https://numanbot-customer-feedback-summarization.hf.space/feedback-summarization/api/v1/docs#/Customer%20Feedback%20Summarization/predict_summary_post)
+
+
+## Documentation
+The following file contains the complete documentation of the use case:
+```
+Customer_Feedback_Summarization.pdf
+```
